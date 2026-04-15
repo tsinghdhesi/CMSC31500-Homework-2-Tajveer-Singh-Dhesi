@@ -1,10 +1,10 @@
 # India Earthquake Explorer
 
-**Live Dashboard:** [https://your-app-name.netlify.app](https://your-app-name.netlify.app)
+**Live Dashboard:** [musical-chaja-fa9427.netlify.app](India-Earthquake-Dashboard)
 
 ## Overview
 
-This dashboard provides an interactive exploration of seismic activity across India from 2000 to 2025, using data from the USGS Earthquake Catalog (M2.5+). Approximately 5,700 earthquakes that fall within Indian state boundaries are visualized across four linked views arranged in a 2×2 grid. The dashboard is built with Svelte 4 and D3.js.
+This dashboard provides an interactive exploration of seismic activity across India from 2000 to 2025, using data from the USGS Earthquake Catalog (M2.5+). Over 1,200 earthquakes that fall within Indian state boundaries are visualized across four linked views arranged in a 2×2, grid. The dashboard is built with Svelte 4 and D3.js.
 
 Each earthquake in the USGS CSV is assigned to an Indian state at load time using `d3.geoContains()` against a simplified GeoJSON of Indian state boundaries. Earthquakes that fall outside all state polygons (offshore events or those in neighboring countries captured by the USGS bounding box query) are excluded.
 
@@ -31,35 +31,7 @@ All four views are linked through a shared crossfilter. Filters combine as an in
 - **Earthquake data:** USGS Earthquake Catalog API, bounding box around India, M2.5+, 2000–2025
 - **GeoJSON:** Indian state-level boundaries (simplified from original, with clockwise winding order preserved for D3 spherical geometry). State name property is `NAME_1`.
 
-## Running Locally
+## Collaborators
+Shreeya Upadhyay - This is my girlfriend in the Geophysical Sciences Department is a Seismology PhD student here at UChicago. She inspired me to use this dataset due to its interesting features variables and geospatial element. She also assisted in advising what might be some interesting aspect to look at for the figures and advised to do count per state over mean magnitude of earthquake by state
+Claude.ai - debugging, basic syntax, aestheitic features. 
 
-```bash
-npm install
-npm run dev
-```
-
-Open http://localhost:5173.
-
-## Build and Deploy
-
-```bash
-npm run build
-```
-
-Static output is written to `dist/`. To deploy on Netlify, connect the repository and set build command to `npm run build` and publish directory to `dist`.
-
-## Project Structure
-
-```
-src/
-  App.svelte             Data loading, point-in-polygon, crossfilter state, layout
-  ChoroplethMap.svelte   Mercator map with two-layer rendering and click selection
-  Histogram.svelte       Magnitude histogram with d3.brushX
-  ScatterPlot.svelte     Depth vs. magnitude scatter with 2D d3.brush
-  BarChart.svelte        Annual count bar chart with click selection
-  main.js                Entry point
-  app.css                Global styles
-public/
-  earthquakes.csv        USGS earthquake data
-  india_states.geojson   Simplified Indian state boundaries
-```
