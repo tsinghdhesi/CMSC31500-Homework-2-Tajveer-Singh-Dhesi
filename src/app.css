@@ -1,0 +1,34 @@
+:root {
+  --color-bg: #f8f7f4;
+  --color-text: #2c2c2c;
+  --color-muted: #888;
+  --color-border: #ddd;
+  --color-panel: #ffffff;
+  --color-accent: #e85d26;
+  --color-accent-light: #fdf0eb;
+  --color-bar: #e85d26;
+  --color-bar-dim: #e0d8d0;
+  --color-dot: #e85d26;
+  --color-dot-dim: #ccc;
+  --font-sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+#app {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+}
