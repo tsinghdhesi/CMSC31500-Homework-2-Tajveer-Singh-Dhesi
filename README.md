@@ -1,6 +1,6 @@
 # India Earthquake Explorer
 
-**Live Dashboard:** [musical-chaja-fa9427.netlify.app](India-Earthquake-Dashboard)
+**Live Dashboard:** [India-Earthquake-Dashboard](musical-chaja-fa9427.netlify.app)
 
 ## Overview
 
@@ -33,5 +33,6 @@ All four views are linked through a shared crossfilter. Filters combine as an in
 
 ## Collaborators
 Shreeya Upadhyay - This is my girlfriend in the Geophysical Sciences Department is a Seismology PhD student here at UChicago. She inspired me to use this dataset due to its interesting features variables and geospatial element. She also assisted in advising what might be some interesting aspect to look at for the figures and advised to do count per state over mean magnitude of earthquake by state
+
 Claude.ai - debugging, basic syntax, aestheitic features. 
 
